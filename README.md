@@ -1,8 +1,8 @@
-# Descripción
-## BOT Actividades ETSIIT
+# BOT Actividades ETSIIT
 -----------------------------------------------------------------------
-Voy a desarrollar un bot de telegram que ofrezca un servicio. Dicho servicio es solicitar al bot las
-actividades semanales de la **ETSIIT**.
+Voy a desarrollar un bot de telegram cuyo proposito es conocer las actividades semanales de la *ETSIIT*.
+Mediante una serie de comandos, se puede solicitar al bot que nos diga las conferencias del dia seleccionado
+o que hay de menú en el comedor.
 
 
 # Herramientas
@@ -10,4 +10,5 @@ actividades semanales de la **ETSIIT**.
 * API de Telegram
 * Lenguaje usado: Python
 * Despliegue en la nube usando un PaaS.
-* Herramientas de integración continua.
+* Herramientas de integración continua: TravisCI
+* Alguna base de datos tipo relacional.
