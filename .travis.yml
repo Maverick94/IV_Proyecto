@@ -1,0 +1,15 @@
+#Para que no haya conflicto con gh-pages
+branches:
+  only:
+  - master
+
+language: python
+python:
+  - 2.7
+  - 3.5
+
+#Todavía no tenemos dependencias ya que es un código sencillo. Se implementarán mas adelante
+#En un archivo requirements.txt
+
+#Pasa los tests a la primera biblioteca creada
+script: make test
