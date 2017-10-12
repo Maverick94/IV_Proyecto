@@ -1,0 +1,11 @@
+{
+
+    "horai":"12:00",
+    "horaf":"13:00",
+    "fechai":"10/10/17",
+    "fechaf":"10/10/17",
+    "denominacion":"Titulo de prueba para aprender a usar JSON",
+    "descripcion":"Prueba de uso JSON para usarlo en las funciones basicas y pasar los tests"
+
+
+}
