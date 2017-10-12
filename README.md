@@ -11,3 +11,5 @@ El lenguaje seleccionado es Python, en principio, la versión 2.7 junto con la A
 Para asegurar la calidad del código, estoy usando la biblioteca `unittest` de Python. Existe un archivo `testFuncionalidadBasicav2.py` donde se han desarrollado test unitarios para cada función desarrollada del código.
 
 Estos tests son lanzados por **TravisCI**. **TravisCI** hace uso de la regla `make test` del Makefile. Esta regla lanza los tests del archivo anteriormente mencionado.
+
+Al realizar estos test, nos aseguramos de que cualquier modificación, actualización o contribución, no *rompen* el código.
