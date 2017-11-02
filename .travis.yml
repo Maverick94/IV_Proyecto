@@ -5,7 +5,6 @@ branches:
 
 language: python
 python:
-  - 2.7
   - 3.5
 
 #Todavía no tenemos dependencias ya que es un código sencillo. Se implementarán mas adelante
