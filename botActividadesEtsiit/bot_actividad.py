@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import telebot
-import os
+import os   #Biblioteca para obtener las variables de entorno
 
 token = os.environ["TOKEN"]#Accedemos a las variables de entorno (configuradas en travis y heroku)
 bot = telebot.TeleBot(token)
