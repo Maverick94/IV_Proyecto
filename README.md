@@ -1,7 +1,6 @@
 # Proyecto IV
 [![Build Status](https://travis-ci.org/Maverick94/IV_Proyecto.svg?branch=master)](https://travis-ci.org/Maverick94/IV_Proyecto)
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+ [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 
 Voy a desarrollar un bot de telegram cuyo propósito es conocer las actividades semanales de la *ETSIIT*.
@@ -29,21 +28,29 @@ al despligue.
 
 Primeramente nos logueamos y tras logearnos lanzamos:
 
-`$ heroku apps:create actividadetsiit`
+```shell
+$ heroku apps:create actividadetsiit
+```
 
 para crear la aplicación. A continuación, he creado un archivo `Procfile` donde le he indicado el contenido
-`worker: cd ./botActividadesEtsiit && python bot_actividad.py`
+```
+worker: cd ./botActividadesEtsiit && python bot_actividad.py
+```
 
 Gracias a esto, heroku sabe las tareas que tiene que hacer al desplegarse.
 
 
 
 Para asignarle las varibles de entorno, lanzamos el comando:
-`heroku config:set TOKEN=<el token del bot>`
+```shell
+heroku config:set TOKEN=<el token del bot>
+```
 
 por último levantamos su *dino* con:
 
-`heroku ps:scale worker=1`
+```shell
+heroku ps:scale worker=1
+```
 
 que es como hemos llamado su acción.
 
