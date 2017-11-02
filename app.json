@@ -1,0 +1,8 @@
+{
+  "name": "Actividades ETSIIT",
+  "description": "Bot que consulta las actividades semanales de la ETSIIT y las muestra",
+  "repository": "https://github.com/Maverick94/IV_Proyecto",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["python"],
+  "addons": [ "heroku-postgresql" ]
+}
