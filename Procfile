@@ -1,1 +1,1 @@
-web: cd ./botActividadesEtsiit && python bot_actividad.py
+worker: cd ./botActividadesEtsiit && python bot_actividad.py
