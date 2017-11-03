@@ -44,14 +44,14 @@ worker: cd ./botActividadesEtsiit && python bot_actividad.py
 Gracias a esto, Heroku sabe las tareas que tiene que hacer al desplegarse.
 Para asignarle las varibles de entorno, lanzamos el comando:
 ```shell
-heroku config:set TOKEN=<el token del bot>
+$ heroku config:set TOKEN=<el token del bot>
 ```
 entre otras, las cuales son referente a la base de datos. En TravisCI habría que configurarlas también si queremos que el código pase los tests de calidad.
 
 Por último levantamos su *dino* con:
 
 ```shell
-heroku ps:scale worker=1
+$ heroku ps:scale worker=1
 ```
 Este *dino* es el que se va a encargar de lanzar la sentencia `cd ./botActividadesEtsiit && python bot_actividad.py` y gracias a esto, el bot estará desplegado.
 que es como hemos llamado su acción.
