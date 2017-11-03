@@ -2,6 +2,7 @@
 [![Build Status](https://travis-ci.org/Maverick94/IV_Proyecto.svg?branch=master)](https://travis-ci.org/Maverick94/IV_Proyecto)
  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
+[Enlace al bot desplegado](https://telegram.me/ActEtsiibot)
 
 Voy a desarrollar un bot de telegram cuyo propósito es conocer las actividades semanales de la *ETSIIT*.
 Mediante una serie de comandos, se puede solicitar al bot que nos diga las conferencias del día seleccionado
@@ -21,40 +22,38 @@ Al realizar estos test, nos aseguramos de que cualquier modificación, actualiza
 
 ## Despliegue en un PaaS
 
-Yo he elegido Heroku ya que es el más económico. No hay que introducir datos bancarios y ofrecen un servicio bastate bueno para ser gratuito. Además, es bastante sencillo instalar una base de datos.
+Yo he elegido Heroku ya que es el más económico. No hay que introducir datos bancarios y ofrecen un servicio bastate bueno para ser gratuito. Además, es bastante sencillo instalar una base de datos. Por defecto nos ofrece *PostgreSQL*
 
 Tras instalar la interfaz que nos ofrece Heroku para el sistema operativo que estemos usando, vamos a proceder
 al despligue.
 
-Primeramente nos logueamos y tras logearnos lanzamos:
+Primeramente nos logueamos con
+```shell
+$ heroku login
+```
+Nos pedirá los credenciales. Tras logearnos lanzamos:
 
 ```shell
 $ heroku apps:create actividadetsiit
 ```
-
-para crear la aplicación. A continuación, he creado un archivo `Procfile` donde le he indicado el contenido
+Con esto estamos creando la aplicación en Heroku.
+ A continuación, he creado un archivo `Procfile` donde le he indicado el contenido
 ```
 worker: cd ./botActividadesEtsiit && python bot_actividad.py
 ```
-
-Gracias a esto, heroku sabe las tareas que tiene que hacer al desplegarse.
-
-
-
+Gracias a esto, Heroku sabe las tareas que tiene que hacer al desplegarse.
 Para asignarle las varibles de entorno, lanzamos el comando:
 ```shell
 heroku config:set TOKEN=<el token del bot>
 ```
+entre otras, las cuales son referente a la base de datos. En TravisCI habría que configurarlas también si queremos que el código pase los tests de calidad.
 
-por último levantamos su *dino* con:
+Por último levantamos su *dino* con:
 
 ```shell
 heroku ps:scale worker=1
 ```
-
+Este *dino* es el que se va a encargar de lanzar la sentencia `cd ./botActividadesEtsiit && python bot_actividad.py` y gracias a esto, el bot estará desplegado.
 que es como hemos llamado su acción.
 
-Para automatizar el proceso, entramos en heroku y en deploy le indicamos que queremos usar github. Le indicamos nuestro repositorio y seleccinamos el despligue automático si pasa los tests.
-
-
-El bot esta lanzado [aquí](https://telegram.me/ActEtsiibot)
+Para automatizar el proceso, entramos en heroku y en las opciones de despliegue, le indicamos que queremos usar github. Le indicamos nuestro repositorio y activamos el despligue autómatico. Selecionamos que sólo se permite el despligue automático si se pasan los test.
