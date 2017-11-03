@@ -79,15 +79,7 @@ class Actividad(object):
         pe = self.conectarBD()
         cursor = pe.cursor()
         cursor.execute("SELECT * FROM Actividades WHERE idactividad="+str(idActividad))
-        consulta = cursor.fetchone()
+        consulta = cursor.fetchall()
         pe.close()
         cursor.close()
-        #Se realiza una consulta a la "BBDD" con la idActividad
-        #Puesto que no tenemos base de datos funcional, suponemos que el archivo estatico es la consulta
-        # try:
-        #     with open('actividad_estatica.json') as data_file:
-        #         actividadAConsultar = json.load(data_file)
-        # except IOError as fallo:
-        #     print("Error %d leyendo actividad_estatica.json: %s", fallo.errno,fallo.strerror)
-
         return str(consulta)
