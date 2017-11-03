@@ -1,3 +1,5 @@
 Pruebas
 .DS_Store
 *.pyc
+.env
+Pipfile*

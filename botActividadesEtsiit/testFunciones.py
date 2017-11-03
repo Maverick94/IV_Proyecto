@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from funcionalidadBasicav2 import Actividad
+from funcionesBD import Actividad
 import unittest
 import psycopg2
 

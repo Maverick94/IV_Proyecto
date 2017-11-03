@@ -4,7 +4,7 @@
 import telebot
 import os   #Biblioteca para obtener las variables de entorno
 import psycopg2
-from funcionalidadBasicav2 import Actividad
+from funcionesBD import Actividad
 
 token = os.environ["TOKEN"]#Accedemos a las variables de entorno (configuradas en travis y heroku)
 bot = telebot.TeleBot(token)
