@@ -1,6 +1,6 @@
 import hug
-from funcionesBD import Actividad
-from types import MappingProxyType
+from botActividadesEtsiit.funcionesBD import Actividad
+# from types import MappingProxyType
 
 
 act=Actividad()
