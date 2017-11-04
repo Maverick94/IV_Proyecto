@@ -2,8 +2,8 @@
 [![Build Status](https://travis-ci.org/Maverick94/IV_Proyecto.svg?branch=master)](https://travis-ci.org/Maverick94/IV_Proyecto)
  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-[Enlace al servicio web](https://actividadetsiit.herokuapp.com/)
-[Enlace al bot desplegado](https://telegram.me/ActEtsiibot)
+* [Enlace al servicio web](https://actividadetsiit.herokuapp.com/)
+* [Enlace al bot desplegado](https://telegram.me/ActEtsiibot)
 
 Voy a desarrollar un bot de telegram cuyo propósito es conocer las actividades semanales de la *ETSIIT*.
 Mediante una serie de comandos, se puede solicitar al bot que nos diga las conferencias del día seleccionado
