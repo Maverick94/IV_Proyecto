@@ -85,4 +85,4 @@ $ curl https://actividadetsiit.herokuapp.com/actividadprueba
 {"Actividad_Ejemplo": "[(1, datetime.date(2017, 12, 5), datetime.date(2017, 12, 5), datetime.time(12, 0), datetime.time(13, 0), 'Conferencia 1', 'Esta es una conferencia de prueba que estamos haciendo para estrenar la BD')]"}
 ```
 
-Servicio web desplegado [aquí](https://actividadetsiit.herokuapp.com/)
+Despliegue https://actividadetsiit.herokuapp.com/
