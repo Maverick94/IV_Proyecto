@@ -4,3 +4,4 @@ psycopg2==2.6.2
 six==1.10.0
 argparse==1.2.1
 hug
+gunicorn
