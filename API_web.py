@@ -1,5 +1,6 @@
 import hug
 from funcionesBD import Actividad
+from types import MappingProxyType
 
 
 act=Actividad()
@@ -11,15 +12,13 @@ def status():
 
 @hug.get('/actividadprueba')
 def actividades_bd():
-    """Devuelve una actividad de prueba"""
-	consulta=act.consultarActividad(1)
+    consulta=act.consultarActividad(1)
     return { "Actividad_Ejemplo": consulta }
 
 @hug.get('/actividad/{id}')
-def one( id: int ):
-    """Devuelve un hito"""
+def one(id):
     consulta=act.consultarActividad(id)
-    if id == 2 || id == 1:
+    if id == 2 or id == 1:
         return { "Actividad": consulta }
     else:
-        return { "Actividad": No existe esa actividad}
+        return { "Actividad": "No existe esa actividad"}
