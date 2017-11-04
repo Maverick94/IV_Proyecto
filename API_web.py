@@ -17,7 +17,7 @@ def actividades_bd():
 
 @hug.get('/actividad/{id}')
 def one(id):
-    consulta=act.consultarActividad(id)
+    consulta=act.consultarActividad(int(id))
     if id == 2 or id == 1:
         return { "Actividad": consulta }
     else:
