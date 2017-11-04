@@ -1,6 +1,6 @@
 import hug
 from botActividadesEtsiit.funcionesBD import Actividad
-# from types import MappingProxyType
+import json
 
 
 act=Actividad()
