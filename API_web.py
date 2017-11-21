@@ -3,7 +3,7 @@ import hug
 # import json
 
 
-act=Actividad()
+# act=Actividad()
 
 @hug.get('/')
 def status():
