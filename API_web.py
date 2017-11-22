@@ -6,6 +6,11 @@ import hug
 # act=Actividad()
 
 @hug.get('/')
+def raiz():
+    """Devuelve estado"""
+    return { "status": "OK" }
+
+@hug.get('/status')
 def status():
     """Devuelve estado"""
     return { "status": "OK" }
