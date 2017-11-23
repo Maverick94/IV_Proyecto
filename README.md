@@ -86,3 +86,38 @@ $ curl https://actividadetsiit.herokuapp.com/actividadprueba
 ```
 
 Despliegue https://actividadetsiit.herokuapp.com/
+
+
+## Uso de Docker
+Podemos "taperizar" el proyecto en un Docker. Para ello, vamos a usar Dockerfile.
+Lo primero que he hecho ha sido instalar Docker.
+
+A continuación, vamos a crear la imagen.
+
+```shell
+$ sudo docker build -t botactividadesetsiit ./
+```
+o tambien
+
+```shell
+$ sudo docker pull maverick94/iv_proyecto
+```
+Para esta última orden, necesitamos haber sincronizado nuestro repositorio con dockerhub. 
+
+Una vez descargada la imagen, vamos a crear el contenedor a partir de ella.
+
+```shell
+$ sudo sudo docker run -i -t botactividadesetsiit
+```
+
+El contenedor se desplegará en local. Comprobamos que funciona en local.
+
+```shell
+$ curl localhost:8000/status
+{"status": "OK"}
+```
+
+Por lo tanto, vamos a proceder al despliegue en Azure.
+
+Para ello, en el Marketplace, elegimos una aplicacion web normal. En la configuración de estos recursos,
+nos dan la opción de asociar nuestro repositorio de DockerHub. Tras la configuración, la máquina virtual de Azure comienza a descargarse nuestro contenedor y lo despliega en un servicio web.
