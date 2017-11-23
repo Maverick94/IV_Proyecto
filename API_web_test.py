@@ -2,12 +2,12 @@ import hug
 import API_web
 
 def test_raiz_OK():
-    datos = hug.test.get(hugweb, '/')
+    datos = hug.test.get(API_web, '/')
     assert datos.status == "200 OK"
     assert datos.data['status']=="OK"
 
 def test_status_OK():
-    datos = hug.test.get(hugweb, '/status')
+    datos = hug.test.get(API_web, '/status')
     assert datos.status == "200 OK"
     assert datos.data['status']=="OK"
 
