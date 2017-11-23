@@ -19,7 +19,7 @@ def status():
 # def actividades_bd():
 #     consulta=act.consultarActividad(1)
 #     return { "Actividad_Ejemplo": consulta }
-#
+
 # @hug.get('/actividad/{id}')
 # def one(id):
 #     consulta=act.consultarActividad(int(id))
