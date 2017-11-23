@@ -127,3 +127,6 @@ Por lo tanto, vamos a proceder al despliegue en Azure.
 
 Para ello, en el Marketplace, elegimos una aplicacion web normal. En la configuración de estos recursos,
 nos dan la opción de asociar nuestro repositorio de DockerHub. Tras la configuración, la máquina virtual de Azure comienza a descargarse nuestro contenedor y lo despliega en un servicio web.
+
+Aquí un ejemplo:
+![imagen](http://i65.tinypic.com/rm5sgn.png)
