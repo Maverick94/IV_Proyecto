@@ -1,6 +1,6 @@
 FROM python:3
 
-MAINTAINER Andrés J Gallardo
+MAINTAINER Andrés J. Gallardo
 
 COPY requirements.txt ./
 RUN pip install -r requirements.txt
