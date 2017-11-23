@@ -4,6 +4,8 @@
 
 * Despliegue https://actividadetsiit.herokuapp.com/
 * [Enlace al bot desplegado](https://telegram.me/ActEtsiibot)
+* Contenedor http://actividadesetsiitweb.azurewebsites.net/status
+* DockerHub https://hub.docker.com/r/maverick94/iv_proyecto/
 
 Voy a desarrollar un bot de telegram cuyo propósito es conocer las actividades semanales de la *ETSIIT*.
 Mediante una serie de comandos, se puede solicitar al bot que nos diga las conferencias del día seleccionado
@@ -63,6 +65,10 @@ que es como hemos llamado su acción.
 
 Para automatizar el proceso, entramos en heroku y en las opciones de despliegue, le indicamos que queremos usar github. Le indicamos nuestro repositorio y activamos el despligue autómatico. Selecionamos que sólo se permite el despligue automático si se pasan los test.
 
+Aquí una captura que documenta el despliegue automático a Heroku desde Github
+
+[!imagen](http://i65.tinypic.com/2v2axah.png)
+
 Bot desplegado [aquí](https://telegram.me/ActEtsiibot)
 ### Despliegue de un servicio web
 Para desplegar un servicio web, vamos a seguir haciendo uso de Heroku. Para ello, vamos a habilitar otro *dyno* de nuestra aplicación de Heroku para el mismo. En nuestro archivo `Procfile` añadimos `web: gunicorn API_web:__hug_wsgi__ --log-file=-` Heroku, usará nuestra API que está desarrollada en `API_web.py` que hace uso de *Hug*.
@@ -102,7 +108,7 @@ o tambien
 ```shell
 $ sudo docker pull maverick94/iv_proyecto
 ```
-Para esta última orden, necesitamos haber sincronizado nuestro repositorio con dockerhub. 
+Para esta última orden, necesitamos haber sincronizado nuestro repositorio con dockerhub.
 
 Una vez descargada la imagen, vamos a crear el contenedor a partir de ella.
 
