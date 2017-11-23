@@ -1,2 +1,2 @@
 test:
-	cd ./botActividadesEtsiit/ && python testFunciones.py
+	python API_web_test.py && cd ./botActividadesEtsiit/ && python testFunciones.py
