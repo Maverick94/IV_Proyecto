@@ -5,3 +5,4 @@ six==1.10.0
 argparse==1.2.1
 hug
 gunicorn
+pytest==3.2.3

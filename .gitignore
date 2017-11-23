@@ -3,3 +3,4 @@ Pruebas
 *.pyc
 .env
 Pipfile*
+.cache
