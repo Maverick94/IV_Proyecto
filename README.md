@@ -103,7 +103,7 @@ A continuación, vamos a crear la imagen.
 ```shell
 $ sudo docker build -t botactividadesetsiit ./
 ```
-o tambien
+o también
 
 ```shell
 $ sudo docker pull maverick94/iv_proyecto
