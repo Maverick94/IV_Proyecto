@@ -93,7 +93,6 @@ $ curl https://actividadetsiit.herokuapp.com/actividadprueba
 
 Despliegue https://actividadetsiit.herokuapp.com/
 
-
 ## Uso de Docker
 Podemos "taperizar" el proyecto en un Docker. Para ello, vamos a usar Dockerfile.
 Lo primero que he hecho ha sido instalar Docker.
