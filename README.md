@@ -67,7 +67,7 @@ Para automatizar el proceso, entramos en heroku y en las opciones de despliegue,
 
 Aquí una captura que documenta el despliegue automático a Heroku desde Github
 
-[!imagen](http://i65.tinypic.com/2v2axah.png)
+![imagen](http://i65.tinypic.com/2v2axah.png)
 
 Bot desplegado [aquí](https://telegram.me/ActEtsiibot)
 ### Despliegue de un servicio web
