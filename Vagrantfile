@@ -24,4 +24,11 @@ Vagrant.configure('2') do |config|
     az.vm_image_urn = 'Canonical:UbuntuServer:16.04-LTS:latest'
     az.resource_group_name = 'vagrant'
   end # config.vm.provider 'azure'
+  config.vm.provision "ansible" do |ansible|
+    ansible.sudo = true
+    ansible.playbook = "./provision/playbook.yml"
+    ansible.verbose = "-vvvv"
+
+    ansible.host_key_checking = false
+  end # config.vm.proviosion
 end # Vagrant.configure

@@ -1,0 +1,28 @@
+- hosts: all
+  sudo: yes
+  remote_user: vagrant
+
+ tasks:
+  - name: Actualizar sistema
+    become: yes
+    command: apt-get update
+
+  - name: Instalar essential
+    become: yes
+    command: apt-get install -y build-essential
+
+  - name: Instalar Git
+    become: yes
+    command: apt-get install -y git
+
+  - name: Instalar pip
+    become: yes
+    command: apt-get install -y python-pip
+
+  - name: Clonar GitHub
+    become: yes
+    git: repo=https://github.com/Maverick94/IV_Proyecto/  dest=home/vagrant/IV_Proyecto clone=yes force=yes
+
+  - name: Instalar requirements
+    become: yes
+    command: pip install -r /home/vagrant/IV_Proyecto/requirements.txt
