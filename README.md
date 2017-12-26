@@ -129,3 +129,18 @@ nos dan la opción de asociar nuestro repositorio de DockerHub. Tras la configur
 
 Aquí un ejemplo:
 ![imagen](http://i65.tinypic.com/rm5sgn.png)
+
+## Despliegue en un IAAS
+
+Para hacer un despligue en un IAAS, vamos a necesitar una parte de aprovisionamiento y una parte de despligue.
+Para ello, vamos a comenzar por la parte de aprovisionamiento. Lo primero que vamos a hacer es instalar vagrant (desde la pagina oficial, ya que la del repositorio no es compatible con el plugin de azure)
+
+```shell
+$ sudo dpkg -i vagrant_2.0.1_x86_64.deb
+```
+y a continuación instalamos el plugin de azure:
+
+```shell
+$ sudo vagrant plugin install vagrant-azure
+```
+Para que Vagrant despliegue nuestra máquina virtual en Azure necesitamos un archivo *Vagrantfile*. Ahí tambien especificaremos el aprovisionamiento con ansible.
