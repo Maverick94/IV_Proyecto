@@ -2,6 +2,8 @@
   become: yes
   become_method: sudo
   remote_user: vagrant
+  vars_files:
+    -var.yml
 
   tasks:
    - name: Actualizar sistema
