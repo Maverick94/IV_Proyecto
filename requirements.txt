@@ -1,7 +1,7 @@
-pyTelegramBotAPI==2.1.7
+pyTelegramBotAPI
 requests
 psycopg2
-six==1.10.0
-argparse==1.2.1
+six
+argparse
 hug
 gunicorn
