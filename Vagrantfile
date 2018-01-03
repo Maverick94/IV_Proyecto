@@ -23,12 +23,12 @@ Vagrant.configure('2') do |config|
     az.subscription_id = ENV['AZURE_SUBSCRIPTION_ID']
 
 
-    az.vm_size = 'Basic_A0' #Tamaño (recursos) de la MV
+    # az.vm_size = 'Basic_A0' #Tamaño (recursos) de la MV
     # az.location = 'westeurope'
     az.tcp_endpoints = '80'
     # Specify VM parameters
-    az.vm_name = 'aztestmaverick'
-    # az.vm_size = 'Standard_B1s'
+    az.vm_name = 'aztestmaverickv2'
+    az.vm_size = 'Standard_B1s'
     az.vm_image_urn = 'Canonical:UbuntuServer:16.04-LTS:latest'
     az.resource_group_name = 'vagrant'
   end # config.vm.provider 'azure'
