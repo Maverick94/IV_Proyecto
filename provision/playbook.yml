@@ -2,8 +2,6 @@
   become: yes
   become_method: sudo
   remote_user: vagrant
-  vars_files:
-    -var.yml
 
   tasks:
    - name: Actualizar sistema
@@ -17,10 +15,16 @@
      command: apt-get install -y git
    - name: Instalar pip
      become: yes
-     command: apt-get install -y python-pip
+     command: apt-get install -y python3-pip
+   - name: Actualizar pip
+     become: yes
+     command: pip3 install --upgrade pip
    - name: Clonar GitHub
      become: yes
      git: repo=https://github.com/Maverick94/IV_Proyecto/  dest=home/vagrant/IV_Proyecto clone=yes force=yes
-   - name: Instalar requirements
-     become: yes
-     command: pip install -r /home/vagrant/IV_Proyecto/requirements.txt
+  #  - name: Entrar en el directorio
+  #    become: yes
+  #    command: cd /home/vagrant/IV_Proyecto
+  #  - name: Instalar requirements
+  #    become: yes
+  #    command: pip3 install -r requirements.txt
