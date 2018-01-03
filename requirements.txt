@@ -1,5 +1,5 @@
 pyTelegramBotAPI==2.1.7
-requests==2.11.1
+requests
 psycopg2
 six==1.10.0
 argparse==1.2.1
