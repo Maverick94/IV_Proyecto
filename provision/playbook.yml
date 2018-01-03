@@ -21,6 +21,6 @@
    - name: Clonar GitHub
      become: yes
      git: repo=https://github.com/Maverick94/IV_Proyecto/  dest=home/vagrant/IV_Proyecto clone=yes force=yes
-   - name: Instalar requirements
-     become: yes
-     command: pip install -r /home/vagrant/IV_Proyecto/requirements.txt
+   # - name: Instalar requirements
+   #   become: yes
+   #   command: pip install -r /home/vagrant/IV_Proyecto/requirements.txt
