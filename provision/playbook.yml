@@ -19,18 +19,15 @@
    - name: Actualizar pip
      become: yes
      command: pip3 install --upgrade pip
-   - name: Clonar GitHub
+   - name: Instalar Supervisor
      become: yes
-     git: repo=https://github.com/Maverick94/IV_Proyecto/  dest=home/vagrant/IV_Proyecto clone=yes force=yes
-<<<<<<< HEAD
-   # - name: Instalar requirements
-   #   become: yes
-   #   command: pip install -r /home/vagrant/IV_Proyecto/requirements.txt
-=======
+     command: apt-get install supervisor
+  #  - name: Clonar GitHub
+  #    become: yes
+  #    git: repo=https://github.com/Maverick94/IV_Proyecto/  dest=home/vagrant/IV_Proyecto clone=yes force=yes
   #  - name: Entrar en el directorio
   #    become: yes
   #    command: cd /home/vagrant/IV_Proyecto
   #  - name: Instalar requirements
   #    become: yes
   #    command: pip3 install -r requirements.txt
->>>>>>> 2eb1a87b2e170dbfcd654682f4bb1abc5a0215bd
