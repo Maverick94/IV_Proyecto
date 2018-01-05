@@ -12,7 +12,7 @@ def InstalarApp():
     # run('sudo apt-get install -y python3-pip')
 
 	# Accedemos al repositorio e instalamos las dependencias
-    run('sudo apt-get install supervisor')
+    run('sudo apt-get install -y supervisor')
     run('cd IV_Proyecto/ && sudo pip3 install -r requirements.txt')
     run('sudo cp IV_Proyecto/apiweb.conf /etc/supervisor/conf.d/')
 
