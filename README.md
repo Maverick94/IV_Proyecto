@@ -144,3 +144,11 @@ y a continuación instalamos el plugin de azure:
 $ sudo vagrant plugin install vagrant-azure
 ```
 Para que Vagrant despliegue nuestra máquina virtual en Azure necesitamos un archivo *Vagrantfile*. Ahí tambien especificaremos el aprovisionamiento con ansible.
+
+
+
+Tras aprovisionar, necesitamos desplegar. Para ello usaremos fabric. En la carpeta despliegue, crearemos un archivo *fabfile.py* que consiste en 3 acciones. Instalar la aplicación, Ejecutar la aplicación y borrar la aplicación.
+
+```shell
+$ fab -H vagrant@
+```
