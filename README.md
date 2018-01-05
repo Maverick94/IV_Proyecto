@@ -6,6 +6,7 @@
 * [Enlace al bot desplegado](https://telegram.me/ActEtsiibot)
 * Contenedor http://actividadesetsiitweb.azurewebsites.net/status
 * DockerHub https://hub.docker.com/r/maverick94/iv_proyecto/
+* Azure IAAS botactividadesetsiit.westus.cloudapp.azure.com
 
 Voy a desarrollar un bot de telegram cuyo propósito es conocer las actividades semanales de la *ETSIIT*.
 Mediante una serie de comandos, se puede solicitar al bot que nos diga las conferencias del día seleccionado
@@ -162,3 +163,5 @@ Un ejemplo del comando sería:
 $ fab -H vagrant@botactividadesetsiit IniciarApp
 ```
 Con este comando, concretamente, lanza la aplicación. Por último, tengo que decir que he usado supervisor para que el servicio quede levantado en segundo plano. Si no usamos supervisor, fabric se quedará conectado eternamente al servidor. Si forzamos su salida, el servicio web no continuará desplegado.
+
+servicio web desplegado: botactividadesetsiit.westus.cloudapp.azure.com

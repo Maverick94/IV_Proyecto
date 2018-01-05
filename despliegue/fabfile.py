@@ -25,7 +25,7 @@ def IniciarApp():
     """ Función para iniciar la web. """
 	# Importamos las variables globales
 	# with shell_env(TOKENBOT="454323731:AAHV_dXizf08VAkEzfMUgOKN9VaM5KCFExI"
-    run('cd ~/IV_Proyecto/ && sudo supervisorctl reread && sudo supervisorctl start apiweb',pty=False)
+    run('cd ~/IV_Proyecto/ && sudo supervisorctl reread && sudo supervisorctl reload && sudo supervisorctl start apiweb',pty=False)
 
 def PararApp():
     """ Función para iniciar la web. """
