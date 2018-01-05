@@ -144,3 +144,21 @@ y a continuación instalamos el plugin de azure:
 $ sudo vagrant plugin install vagrant-azure
 ```
 Para que Vagrant despliegue nuestra máquina virtual en Azure necesitamos un archivo *Vagrantfile*. Ahí tambien especificaremos el aprovisionamiento con ansible.
+
+Ansible tomará el archivo *playbook.yml* y hará las "gestiones iniciales" de la máquina.
+
+Para proceder hacemos:
+
+```shell
+$ vagrant up
+```
+
+y creará una máquina virtual en azure con el aprovisionamiento necesario.
+
+Tras aprovisionar, necesitamos desplegar. Para ello usaremos fabric. En la carpeta despliegue, crearemos un archivo *fabfile.py* que consiste en 4 acciones. Instalar la aplicación, ejecutar la aplicación, parar la aplicación y borrar la aplicación.
+
+Un ejemplo del comando sería:
+```shell
+$ fab -H vagrant@botactividadesetsiit IniciarApp
+```
+Con este comando, concretamente, lanza la aplicación. Por último, tengo que decir que he usado supervisor para que el servicio quede levantado en segundo plano. Si no usamos supervisor, fabric se quedará conectado eternamente al servidor. Si forzamos su salida, el servicio web no continuará desplegado.

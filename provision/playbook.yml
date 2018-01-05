@@ -19,12 +19,3 @@
    - name: Actualizar pip
      become: yes
      command: pip3 install --upgrade pip
-  #  - name: Clonar GitHub
-  #    become: yes
-  #    git: repo=https://github.com/Maverick94/IV_Proyecto/  dest=home/vagrant/IV_Proyecto clone=yes force=yes
-  #  - name: Entrar en el directorio
-  #    become: yes
-  #    command: cd /home/vagrant/IV_Proyecto
-  #  - name: Instalar requirements
-  #    become: yes
-  #    command: pip3 install -r requirements.txt
