@@ -19,9 +19,6 @@
    - name: Actualizar pip
      become: yes
      command: pip3 install --upgrade pip
-   - name: Instalar Supervisor
-     become: yes
-     command: apt-get install supervisor
   #  - name: Clonar GitHub
   #    become: yes
   #    git: repo=https://github.com/Maverick94/IV_Proyecto/  dest=home/vagrant/IV_Proyecto clone=yes force=yes
