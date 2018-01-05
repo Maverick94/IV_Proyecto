@@ -161,5 +161,4 @@ Un ejemplo del comando sería:
 ```shell
 $ fab -H vagrant@botactividadesetsiit IniciarApp
 ```
-
 Con este comando, concretamente, lanza la aplicación. Por último, tengo que decir que he usado supervisor para que el servicio quede levantado en segundo plano. Si no usamos supervisor, fabric se quedará conectado eternamente al servidor. Si forzamos su salida, el servicio web no continuará desplegado.

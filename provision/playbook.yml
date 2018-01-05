@@ -19,6 +19,3 @@
    - name: Actualizar pip
      become: yes
      command: pip3 install --upgrade pip
-   - name: Instalar Supervisor
-     become: yes
-     command: apt-get install supervisor
