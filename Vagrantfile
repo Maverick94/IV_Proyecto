@@ -6,9 +6,11 @@ Vagrant.configure('2') do |config|
 
   # Use dummy Azure box
   config.vm.box = 'azure-dummy'
-
+  config.vm.network "private_network",ip: "192.168.11.4", virtualbox__intnet: "vboxnet0" #Ip privada
+  config.vm.hostname = "localhost"
 
   config.vm.network "forwarded_port", guest: 80, host: 80
+
 
 
   # Configure the Azure provider
